@@ -56,6 +56,7 @@ library(plyr)
 act = mapvalues(mean_sd$Activity,c(1,2,3,4,5,6),c("WALKING","WALKING_UPSTAIRS","WALKING_DOWNSTAIRS","SITTING","STANDING","LAYING"))
 
 mean_sd_act <- select(mean_sd,-contains("Activity")) %>% mutate( "Activity" = act)
+#dim(mean_sd_act) is 10299 20
 
 # Labels the data set with descriptive variable name for Step 4 as given in the project
 
@@ -68,3 +69,4 @@ names(mean_sd_act) <- gsub("-std", "Std", names(mean_sd_act))
 # Create independent tidy data set cdata for Step 5 as given in the project
   
 cdata <- ddply(mean_sd_act,.(Subject,Activity),numcolwise(mean))
+#dim(cdata) is 180  20
