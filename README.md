@@ -7,9 +7,9 @@ I have created a single script run_analysis.R that will take care of all the ste
 
 (1) Merges the training and the test sets to create one data set:
 
-Read the test and train data
-Merge them based of dimensions
-Read the features file,add it as the header for the column names and add two additional columns as "Subject" and "Activity"
+Read the test and train data.
+Merge them based of dimensions.
+Read the features file,add it as the header for the column names and add two additional columns as "Subject" and "Activity".
 
 
 (2) Extracts only the measurements on the mean and standard deviation for each measurement:
